@@ -108,9 +108,9 @@ def generuj_sekwencje():
             sq.szablon['tagi'] = f.read()
 
         sciezka = os.path.abspath(os.path.dirname(sys.argv[0]))
-        nazwa_pliku = sciezka + "\out\\" + edit_nazwa_funkcji.get() + ".awl"
-        nazwa_pliku_tag = sciezka + "\out\\" + edit_nazwa_funkcji.get() + "_tagi.txt"
-        nazwa_pliku_hmi = sciezka + "\out\\" + edit_nazwa_funkcji.get() + "_hmi.txt"
+        nazwa_pliku = sciezka + "/out/" + edit_nazwa_funkcji.get() + ".awl"
+        nazwa_pliku_tag = sciezka + "/out/" + edit_nazwa_funkcji.get() + "_tagi.txt"
+        nazwa_pliku_hmi = sciezka + "/out/" + edit_nazwa_funkcji.get() + "_hmi.txt"
 
         sq.zapisz_szablon(nazwa_pliku)
         sq.zapisz_tagi(nazwa_pliku_tag)
@@ -137,12 +137,12 @@ font_14_courier_new = Font(family='Courier New', size=14)
 font_12_courier_new = Font(family='Courier New', size=12)
 
 #  Open button
-btn_open_ico = PhotoImage(file='ico\\document-open.png')
+btn_open_ico = PhotoImage(file='ico/document-open.png')
 btn_open = Button(sideFrame, text='Otwórz', height=34, image=btn_open_ico, compound=LEFT, padx=10, pady=2,
                   command=open_file).pack(fill=X)
 
 #  Save button
-btn_save_ico = PhotoImage(file='ico\\media-floppy.png')
+btn_save_ico = PhotoImage(file='ico/media-floppy.png')
 btn_save = Button(sideFrame, text='Zapisz', height=34, image=btn_save_ico, compound=LEFT, padx=10, pady=2,
                   command=lambda: save_file(edytor_txt.get(1.0, END))).pack(fill=X)
 
@@ -182,32 +182,32 @@ edit_plc.config(font=font_12_courier_new, width=16, justify='center')
 edit_plc.pack()
 
 #  Formatuj button
-btn_format_ico = PhotoImage(file='ico\\format-justify-left.png')
+btn_format_ico = PhotoImage(file='ico/format-justify-left.png')
 btn_format = Button(sideFrame, text='Formatuj', height=34, image=btn_format_ico, compound=LEFT, padx=10, pady=2,
                     command=clean_edytor)
 btn_format.pack(fill=X, pady=[20, 0])
 
 #  Convert button
-btn_convert_ico = PhotoImage(file='ico\\preferences-desktop-wallpaper.png')
+btn_convert_ico = PhotoImage(file='ico/preferences-desktop-wallpaper.png')
 btn_convert = Button(sideFrame, text='Konwertuj', height=34, image=btn_convert_ico, compound=LEFT, padx=10, pady=2,
                      command=generuj_sekwencje)
 btn_convert.config(state=DISABLED)
 btn_convert.pack(fill=X)
 
 # #  Steps button
-# btn_steps_ico = PhotoImage(file='ico\\view-sort-descending.png')
+# btn_steps_ico = PhotoImage(file='ico/view-sort-descending.png')
 # btn_steps = Button(sideFrame, text='Pokaż kroki', height=34, image=btn_steps_ico, compound=LEFT, padx=10, pady=2)
 # btn_steps.config(state=DISABLED)
 # btn_steps.pack(fill=X, pady=[20, 0])
 #
 # #  Msg button
-# btn_msg_ico = PhotoImage(file='ico\\accessories-dictionary.png')
+# btn_msg_ico = PhotoImage(file='ico/accessories-dictionary.png')
 # btn_msg = Button(sideFrame, text='Pokaż komunikaty', height=34, image=btn_msg_ico, compound=LEFT, padx=10, pady=2)
 # btn_msg.config(state=DISABLED)
 # btn_msg.pack(fill=X)
 #
 # #  Tags button
-# btn_tags_ico = PhotoImage(file='ico\\preferences-desktop-theme.png')
+# btn_tags_ico = PhotoImage(file='ico/preferences-desktop-theme.png')
 # btn_tags = Button(sideFrame, text='Pokaż tagi', height=34, image=btn_tags_ico, compound=LEFT, padx=10, pady=2)
 # btn_tags.config(state=DISABLED)
 # btn_tags.pack(fill=X)
