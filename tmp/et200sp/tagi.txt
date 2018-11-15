@@ -1,0 +1,1 @@
+{krok}	Kroki	Bool	M999.0	False	True	True	True		{komentarz}

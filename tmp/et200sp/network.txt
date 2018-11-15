@@ -1,0 +1,10 @@
+NETWORK
+TITLE = {tytul}
+{warunek_wejscia}
+      A #warunek_sekwencji;
+      A "Log_0";
+      S {nastepny_krok}
+
+{warunek_wyjscia}
+      O {reset_krokow}
+      R {nastepny_krok}

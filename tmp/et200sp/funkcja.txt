@@ -1,0 +1,30 @@
+FUNCTION "{nazwa_funkcji}" : Void
+TITLE = "{nazwa_funkcji}"
+{ S7_Optimized_Access := 'TRUE' }
+AUTHOR : PSlezak
+FAMILY : Vorster
+VERSION : 0.1
+   VAR_TEMP 
+      warunek_sekwencji : Bool;
+   END_VAR
+
+
+BEGIN
+NETWORK
+TITLE = Reset
+      O "Log_0";
+      = {reset_krokow}
+NETWORK
+TITLE = Brak kroków
+{brak_krokow}
+NETWORK
+TITLE = Warunek sekwencji
+      A "Log_1";
+      = #warunek_sekwencji;
+{kroki}
+NETWORK
+TITLE = [{nazwa_funkcji}] ====================================
+
+{komunikaty}
+END_FUNCTION
+

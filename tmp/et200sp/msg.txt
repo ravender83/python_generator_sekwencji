@@ -1,0 +1,5 @@
+NETWORK
+TITLE = {msg_numer} - {tytul}
+{warunek_wejscia}
+      L {msg_numer};
+      JC kom;
